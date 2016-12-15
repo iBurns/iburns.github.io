@@ -1,14 +1,20 @@
 .jumbotron {
-	background: black;
+	background: #eee;
 	color: white;
 	text-align: center;
   padding-bottom: 10%;
   padding-top: 10%;
+
+	background-image: url(../assets/background.jpg);
+  vertical-align: bottom;
+  background-position: 0% 77%;
+  background-size: cover;
+  background-repeat: no-repeat;
   /*margin-top: 0;*/
 }
 
-.btn-primary {
-	color: #fff;
+/*.btn-primary {
+	color: #code;
 	background-color: transparent;
 	border-color: white;
 	margin-bottom: 5px;
@@ -34,15 +40,20 @@
 .btn-primary.active {
 	color: black;
 	background-color: white;
-	border-color: white;
-}
+	border-color: white;*/
+/*}
 
 #jumbomain {
-  background-image: url(../assets/background.jpg);
+  background-image: url(../assets/background2.jpg);
   vertical-align: bottom;
   background-position: 0% 77%;
   background-size: cover;
   background-repeat: no-repeat;
+}*/
+
+.footer {
+		text-align: center;
+		vertical-align: bottom;
 }
 
 .jumbotron p {
