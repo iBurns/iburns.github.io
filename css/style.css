@@ -1,5 +1,5 @@
 .jumbotron {
-	background: #c0de13;
+	background: black;
 	color: white;
 	text-align: center;
   padding-bottom: 10%;
@@ -40,7 +40,7 @@
 #jumbomain {
   background-image: url(../assets/background.jpg);
   vertical-align: bottom;
-  background-position: 0% 75%;
+  background-position: 0% 77%;
   background-size: cover;
   background-repeat: no-repeat;
 }
