@@ -1,0 +1,55 @@
+.jumbotron {
+	background: #c0de13;
+	color: white;
+	text-align: center;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  /*margin-top: 0;*/
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+
+.btn-primary:hover,
+.btn-primary.hover {
+	color: black;
+	background-color: white;
+	border-color: white;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+	color: black;
+	background-color: white;
+	border-color: white;
+}
+
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active {
+	color: black;
+	background-color: white;
+	border-color: white;
+}
+
+#jumbomain {
+  background-image: url(../assets/background.jpg);
+  vertical-align: bottom;
+  background-position: 0% 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotron p {
+	color: white;
+	font-size: 26px;
+}
+
+.glyphicon-large {
+	font-size: 50px;
+}
