@@ -109,8 +109,8 @@ a.nav-link.active {
 
 .mainpage p {
   color: #D8DBE2;
-  width: 500px;
   padding: 30px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   animation: fade 1s ease;
@@ -158,4 +158,16 @@ a.nav-link.active {
   animation: whoaa 1s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  .mainpage p {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 501px) /* Mobile */ {
+  .mainpage p {
+    width: 500px;
+  }
 }
