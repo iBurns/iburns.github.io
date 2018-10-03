@@ -1,3 +1,6 @@
+// out: ./style.css
+
+
 /*
 
 Dark: #1B1B1E;
@@ -9,13 +12,19 @@ Dark White: #D8DBE2;
 White: #fff;
 
 */
-body,
-html {
+
+@defaultText: black;
+@defaultHighlight: white;
+@backgroundBase: #4a4a4a;
+
+
+body, html {
   background-color: white;
-  color: black;
+  color: @defaultText;
   position: relative;
   width: auto;
 }
+
 .bod > .bod p {
   width: 380px;
   margin-left: auto;
@@ -23,91 +32,105 @@ html {
   padding: 0;
   border: 0;
 }
+
 .navbar-brand {
-  position: absolute;
-  margin-left: auto;
-  margin-top: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-top: auto;
 }
+
 /** Navbar **/
+
 .navbar-custom {
-  background-color: #4a4a4a;
-  animation: fadetop 1s ease;
-  animation-delay: 2.5s;
-  animation-fill-mode: both;
+    background-color: @backgroundBase;
+    animation: fadetop 1s ease;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
 }
+
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-  color: white;
+    color: @defaultHighlight;
 }
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-  color: #fff;
+    color: #fff;
 }
+
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link,
-.navbar-custom.active {
-  color: black;
-  background-color: white;
-  transition: .35s;
+.navbar-custom .nav-item:hover .nav-link, .navbar-custom.active {
+    color: @defaultText;
+    background-color: @defaultHighlight;
+    transition: .35s;
 }
+
 /* Nav link normal color */
 .nav-link {
-  color: white;
+  color: @defaultHighlight;
 }
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: black;
-  background-color: white;
+  color: @defaultText;
+  background-color: @defaultHighlight;
   transition: .35s;
 }
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:focus,
-.nav-pills > li.active > a:hover {
-  color: white;
-  background-color: #4a4a4a;
-  transition: .35s;
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+color: @defaultHighlight;
+background-color: @backgroundBase;
+transition: .35s;
 }
+
 a.nav-link.active {
-  background-color: #4a4a4a;
+  background-color: @backgroundBase;
 }
+
 /* for dropdown only - change the color of droodown */
 .navbar-custom .dropdown-menu {
-  background-color: #4a4a4a;
+    background-color: @backgroundBase;
 }
 .navbar-custom .dropdown-item {
-  color: black;
+    color: @defaultText;
 }
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus {
-  color: #333333;
-  background-color: rgba(255, 255, 255, 0.5);
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
 }
+
 /** End Navbar **/
+
 /** Main Page **/
+
 .mainpage .myname {
-  color: white;
+  color: @defaultHighlight;
   padding-top: 1.5%;
   animation: fadetop 1s ease;
   animation-delay: .12s;
   animation-fill-mode: both;
   margin: 0;
 }
+
 .mainpage .mytitle {
-  color: white;
+  color: @defaultHighlight;
   animation: fadetop 1s ease;
   animation-delay: 1.12s;
   animation-fill-mode: both;
 }
+
 .mainpage .projectsection {
-  color: black;
+  color: @defaultText;
   padding: 2.5%;
   animation: fade 1s ease;
   animation-delay: 2.32s;
   animation-fill-mode: both;
   padding-top: 19%;
 }
+
 .mainpage p {
   color: #D8DBE2;
   padding: 30px;
@@ -118,55 +141,38 @@ a.nav-link.active {
   animation-delay: 2.05s;
   animation-fill-mode: both;
 }
+
 /** Animations **/
+
 @keyframes fadein {
-  from {
-    color: rgba(255, 255, 255, 0);
-  }
-  to {
-    color: #ffffff;
-  }
+  from { color: rgba(255,255,255,0); }
+  to { color: rgba(255,255,255,1); }
 }
+
 @keyframes fade {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-25px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
+  0% { opacity:0; -webkit-transform: translateX(-25px); }
+  100% { opacity: 1; -webkit-transform: translateX(0px); }
 }
+
 @keyframes fadetop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-25px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-  }
+  0% { opacity:0; -webkit-transform: translateY(-25px); }
+  100% { opacity: 1; -webkit-transform: translateY(0px); }
 }
+
 @keyframes spinin {
-  0% {
-    -webkit-transform: rotateY(0.25turn);
-  }
-  100% {
-    -webkit-transform: rotateY(0turn);
-  }
+  0% { -webkit-transform: rotateY(.25turn); }
+  100% { -webkit-transform: rotateY(0turn); }
 }
+
 @keyframes whoaa {
-  0% {
-    -webkit-transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    opacity: 1;
-  }
+  0% { -webkit-transform: scale(.8); opacity:0; }
+  100% { -webkit-transform: scale(1); opacity: 1; }
 }
+
 /** End Animations **/
+
 /** Index Formatting **/
+
 .profilepicture {
   text-align: center;
   margin-left: auto;
@@ -174,6 +180,7 @@ a.nav-link.active {
   padding-top: 100px;
   perspective: 1000px;
 }
+
 #profilepicture {
   width: 206px;
   height: 206px;
@@ -181,24 +188,30 @@ a.nav-link.active {
   animation: whoaa 1s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+
   background-color: #F80;
-  border: 7px solid #4a4a4a;
+  border: 7px solid @backgroundBase;
   border-radius: 18px;
+
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0 0 0 6px #ffffff;
 }
+
 /** Project Formatting **/
+
 .projectname {
   margin-top: 100px;
   animation: whoaa .8s;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
+
 .projecttitle {
   animation: fadetop 0.8s ease;
   animation-delay: 0.6s;
   animation-fill-mode: both;
 }
+
 .projectheaders {
   color: #D8DBE2;
   padding: 2.5%;
@@ -207,52 +220,62 @@ a.nav-link.active {
   animation-delay: 1.2s;
   animation-fill-mode: both;
 }
+
 .project .navbar-custom {
-  background-color: black;
-  animation: fadetop 1s ease;
-  animation-delay: 1.8s;
-  animation-fill-mode: both;
+    background-color: black;
+    animation: fadetop 1s ease;
+    animation-delay: 1.8s;
+    animation-fill-mode: both;
 }
+
 .project .text-center {
   margin-bottom: 0;
-  animation: fadetop 1s ease;
-  animation-delay: 1.1s;
-  animation-fill-mode: both;
+    animation: fadetop 1s ease;
+    animation-delay: 1.1s;
+    animation-fill-mode: both;
 }
+
 /** Card Formating **/
+
 .project .card-title {
   text-align: center;
-  background: white;
+  background: @defaultHighlight;
   padding: 20px;
   opacity: 0.65;
   transition: 0.2s;
-  color: white;
+  color: @defaultHighlight;
 }
+
 .project .card-title:hover {
   text-align: center;
   background: black;
   padding: 20px;
   opacity: 0;
 }
+
 .card-img-overlay {
   padding: 0;
 }
+
 .card-group {
   margin: auto;
   width: 550px;
 }
+
 .card {
   margin: auto;
   text-align: center;
   max-width: 100%;
-  border-color: #4a4a4a;
+  border-color: @backgroundBase;
   margin-bottom: 40px;
   width: 500px;
 }
+
 .card .card-body {
-  background-color: #4a4a4a;
-  border-color: #4a4a4a;
+  background-color: @backgroundBase;
+  border-color: @backgroundBase;
 }
+
 .card .card-text {
   margin: auto;
   word-wrap: break-word;
@@ -260,18 +283,23 @@ a.nav-link.active {
   margin-bottom: 20px;
   padding: 0;
 }
+
 .card .card-text p {
   margin: auto;
   word-wrap: break-word;
 }
+
 .card .cardbtn {
-  background-color: white;
-  color: black;
+  background-color: @defaultHighlight;
+  color: @defaultText;
 }
+
 .card-title {
-  color: white;
+  color: @defaultHighlight;
 }
+
 /** Footer **/
+
 .footer {
   width: 100%;
   margin: auto;
@@ -279,53 +307,61 @@ a.nav-link.active {
   margin-bottom: 40px;
   text-align: center;
   color: #A9BCD0;
+
   animation: fade 1s ease;
   animation-delay: 3s;
   animation-fill-mode: both;
 }
+
 /** No Transition **/
+
 .notransition {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+
   -o-transform: none !important;
   -moz-transform: none !important;
   -ms-transform: none !important;
   -webkit-transform: none !important;
   transform: none !important;
+
   -webkit-animation: none !important;
   -moz-animation: none !important;
   -o-animation: none !important;
   -ms-animation: none !important;
   animation: none !important;
 }
+
 /** @Media Formatting **/
-@media screen and (max-width: 500px) {
-  /* Mobile */
+
+@media screen and (max-width: 500px) /* Mobile */ {
   .mainpage p {
     width: 500px;
   }
 }
-@media screen and (min-width: 501px) {
-  /* Mobile */
+
+@media screen and (min-width: 501px) /* Mobile */ {
   .mainpage p {
     width: 500px;
   }
 }
-@media screen and (max-width: 1200px) {
-  /* Mobile */
+
+@media screen and (max-width: 1200px) /* Mobile */ {
   #swoopyBackground {
-    left: -10%;
+      left: -10%;
   }
 }
+
 /** SVG **/
 svg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position:absolute;
+	top:0;
+	left:0;
   width: 2000px;
 }
+
 #swoopyBackground {
   top: -24%;
 }
