@@ -1,105 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <title>Ian Burns</title>
 
-    <!-- Bootstrap
-    <link rel="stylesheet" href="css/bootstrap-4/css/bootstrap.min.css" type="text/css">
-    <script src="node_modules/jquery/dist/jquery.slim.min.js" type="text/javascript"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
-    <script src="css/bootstrap-4/js/bootstrap.min.js" type="text/javascript"></script>
-  -->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
-    <script src="js/transitionhandler.js" charset="utf-8"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <style>
+      .myButton {
+      	display:inline-block;
+      	cursor:pointer;
+        position: relative;
+      	color:#535353;
+      	font-family: Helvetica Light, Helvetica;
+      	font-size:18px;
+      	padding:16px 30px;
+      	text-decoration:none;
+        width: 90px;
+        text-align: center;
+        transition:         0.11s ease-in;
+        -o-transition:      0.11s ease-in;
+        -ms-transition:     0.11s ease-in;
+        -moz-transition:    0.11s ease-in;
+        -webkit-transition: 0.11s ease-in;
+      }
+      .myButton:hover {
+        color:#FDF6EB;
+      }
+      .myButton:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 90%;
+        z-index: -1;
+        -webkit-transition: right 0.3s cubic-bezier(.69,-0.41,.25,1.41);
+      }
+      .myButton:hover:before {
+        right: 0;
+      }
+      .redBtn:before {
+        background-color:#B21F45;
+      }
+      .greenBtn:before {
+        background-color:#A7B21F;
+      }
+      .blueBtn:before {
+        background-color:#369E9E;
+      }
+      .myButton:active {
+      	position:relative;
+      	top:1px;
+      }
+    </style>
   </head>
 
-  <body class="scroll-area" data-spy="scroll" data-offset="0">
-    <div class="transitiondiv">
-      <nav id="navbar-example2" class="navbar fixed-top navbar-custom justify-content-center">
-        <a class="navbar-brand" href="#"></a>
-        <ul class="nav nav-pills center navbar-custom">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-        <div class="mainpage" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-
-
-        <svg id="swoopyBackground" viewBox="0 0 1024 679" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-            <desc>Created with Sketch.</desc>
-            <defs></defs>
-            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Desktop" fill="#4A4A4A">
-                    <path d="M630.680842,-654.297142 C687.850166,-617.434374 1002.2749,-377.951502 1573.95503,64.1514741 C1621.95097,110.728494 1581.66052,165.736823 1488.48989,188.06095 C795.430867,482.124763 408.260566,639.831151 326.978988,661.180113 C205.056621,693.203556 159.616145,687.90376 23.7303144,572.786464 C-66.8602393,496.041601 -296.148106,293.469517 -664.133287,-34.9297852 C-738.756318,-87.6541539 -772.164858,-159.677236 -734.227245,-194.752909 L320.093744,-710.904582 C403.84587,-735.40314 544.926856,-709.591294 630.680842,-654.297142 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </svg>
-
-          <div id="home" class="vertical-center justify-content-center">
-
-            <div class="profilepicture">
-              <img id="profilepicture" src="img/ProfileSquare.jpg" class="rounded-circle">
-            </div>
-
-            <h1 class="display-2 text-center myname">Ian Burns</h1>
-            <h2 class="display-4 text-center mytitle">Developer.</h2>
-
-            <!-- <div class="bod">
-              <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin rutrum rutrum. Phasellus rhoncus egestas libero, in malesuada tortor volutpat non. Morbi sagittis ligula eu convallis molestie. In non diam sit amet orci aliquam aliquet. Suspendisse pulvinar velit nec malesuada porta. Suspendisse velit purus, varius vitae mattis non, finibus sit amet mi. Integer iaculis non tortor imperdiet sagittis. Duis fringilla dui lectus, sit amet consequat sapien cursus in. Proin tincidunt dui nulla, non sagittis erat lacinia vitae. Praesent consectetur facilisis varius.</p>
-            </div> -->
-          </div>
-
-          <div id="projects" class="vertical-center projectsection">
-            <h1 class="display-3 text-center">My Projects</h1>
-
-            <div class="card">
-              <img class="card-img-top" alt="AVM" src="img/AVMProject1.png">
-              <div class="card-body">
-                <h4 class="card-title">Adjustable Vitals Monitor</h4>
-                <p class="card-text">Created as part of a 24-hour health-focused hackathon.</p>
-                <a href="project.html?project=avm" class="btn cardbtn">More Info</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <img class="card-img-top" alt="Doors & Locks iPhone App" src="img/DoorsLocks1.jpg">
-              <div class="card-body">
-                <h4 class="card-title">Doors & Locks</h4>
-                <p class="card-text">Published iOS Puzzle Game.</p>
-                <a href="project.html?project=doorslocks" class="btn cardbtn">More Info</a>
-              </div>
-            </div>
-          </div>
-      </div>
+  <body style="font-family: Helvetica Light, Helvetica; background-color: #FDF6EB; color: #535353;">
+    <div id="header" style="display: flex; width: 100%; height: 500px; justify-content: center; align-items: center; flex-direction: column;">
+      <span style="font-size: 26px;">ian burns</span>
+      <span style="font-size: 16px;">developer</span>
     </div>
-
+    <div id="buttons" style="display: flex; width: 100%; height: 100px; justify-content: center; align-items: center; flex-direction: column;">
+      <a href="#" class="myButton redBtn fill">projects</a>
+      <a href="#" class="myButton blueBtn">about me</a>
+      <a href="#" class="myButton greenBtn">blog</a>
+    </div>
   </body>
-
-  <footer>
-    <div class="footer">
-      <p>Ian Burns 2017</p>
-    </div>
-  </footer>
 
   </html>

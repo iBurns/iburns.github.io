@@ -106,7 +106,7 @@ a.nav-link.active {
   animation: fade 1s ease;
   animation-delay: 2.32s;
   animation-fill-mode: both;
-  padding-top: 19%;
+  padding-top: 25%;
 }
 .mainpage p {
   color: #D8DBE2;
@@ -117,6 +117,10 @@ a.nav-link.active {
   animation: fade 1s ease;
   animation-delay: 2.05s;
   animation-fill-mode: both;
+}
+.mainpage {
+  max-width: 640px;
+  margin: auto;
 }
 /** Animations **/
 @keyframes fadein {
@@ -300,23 +304,62 @@ a.nav-link.active {
   -ms-animation: none !important;
   animation: none !important;
 }
+#swoopyBackground {
+  top: -10%;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 /** @Media Formatting **/
 @media screen and (max-width: 500px) {
   /* Mobile */
   .mainpage p {
     width: 500px;
   }
+  #swoopyParent {
+    top: 15%;
+  }
 }
-@media screen and (min-width: 501px) {
+@media screen and (max-width: 500px) {
   /* Mobile */
   .mainpage p {
     width: 500px;
   }
+  #swoopyBackground {
+    width: 500px;
+  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 501px) and (max-width: 768px) {
   /* Mobile */
   #swoopyBackground {
-    left: -10%;
+    top: 5%;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Mobile */
+  #swoopyBackground {
+    top: -1%;
+    width: 1024px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* Mobile */
+  #swoopyBackground {
+    top: -10%;
+    width: 1440px;
+  }
+  .mainpage .projectsection {
+    padding-top: 35%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* Mobile */
+  #swoopyBackground {
+    top: -10%;
+    width: 1440px;
   }
 }
 /** SVG **/
@@ -324,8 +367,8 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2000px;
 }
-#swoopyBackground {
-  top: -24%;
+.swoopyParent {
+  max-width: 600px;
+  overflow: hidden;
 }
